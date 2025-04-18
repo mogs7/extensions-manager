@@ -1,13 +1,14 @@
 //import { useState } from 'react';
 import Header from "./components/Header";
 import FilterButton from "./components/FilterButton";
-import ExtensionItem from "./components/ExtensionItem";
-import data from './data.json';
 import { useState } from "react";
+import GridItem from "./components/GridItems";
 
 function App() {
 
   const [filterButtonState, setFilterButtonState] = useState("All");
+  // console.log(filterButtonState);
+  
 
   return (
     <div className="Content-Wrapper">
@@ -33,20 +34,7 @@ function App() {
         </div>
       </div>
       <div className="Grid-Container">
-        {
-          data.map((extension, index)=>{
-            console.log(extension.logo);
-            return (
-              <ExtensionItem 
-                key={index}
-                name={extension.name}
-                logo={extension.logo}
-                desc={extension.description}
-                state={extension.isActive}
-              />
-            )
-          })
-        }
+        <GridItem filterState={filterButtonState} />
       </div>
     </div>
   )

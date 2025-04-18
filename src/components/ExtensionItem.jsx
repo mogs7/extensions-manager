@@ -3,7 +3,7 @@ import { Switch } from '@headlessui/react';
 import extenstionItemStyles from './ExtensionItem.module.css';
 
 function ExtensionItem(props){
-    const [isActive, setIsActive] = useState(props.state);
+    const [isActive, setIsActive] = useState(props.isActive);
 
     return (
         <div className={extenstionItemStyles["Extension-Container"]}>
@@ -11,7 +11,7 @@ function ExtensionItem(props){
                 <img className={extenstionItemStyles["Extension-Logo"]} src={props.logo} alt="" />
                 <div>
                     <h2>{props.name}</h2>
-                    <p>{props.desc}</p>
+                    <p>{props.description}</p>
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "space-between"}}>
