@@ -1,9 +1,12 @@
-import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 import extenstionItemStyles from './ExtensionItem.module.css';
 
 function ExtensionItem(props){
-    const [isActive, setIsActive] = useState(props.isActive);
+    console.log("isActive: " + props.isActive);
+    // console.log("setIsActive: " + props.setIsActive);
+    // console.log("index: " + props.index);
+
+
 
     return (
         <div className={extenstionItemStyles["Extension-Container"]}>
@@ -15,20 +18,20 @@ function ExtensionItem(props){
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "space-between"}}>
-                <button className={extenstionItemStyles["Extension-Remove-Button"]}>Remove</button>
+                <button className={extenstionItemStyles["Extension-Remove-Button"]}>Remove | ID: {props.id}</button>
                 <Switch
-                checked={isActive}
-                onChange={setIsActive}
-                className={`${
-                    isActive ? 'bg-red-700' : 'bg-gray-200'
-                } relative inline-flex h-6 w-11 items-center rounded-full cursor-pointer duration-200`}
-                >
-                <span className="sr-only">Toggle Button</span>
-                <span
+                    checked={props.isActive}
+                    onChange={props.onToggle}
                     className={`${
-                        isActive ? 'translate-x-6' : 'translate-x-1'
-                    } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-                />
+                        props.isActive ? 'bg-red-700' : 'bg-gray-200'
+                    } relative inline-flex h-6 w-11 items-center rounded-full cursor-pointer duration-200`}
+                    >
+                    <span className="sr-only">Toggle Button</span>
+                    <span
+                        className={`${
+                            props.isActive ? 'translate-x-6' : 'translate-x-1'
+                        } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+                    />
                 </Switch>
             </div>
         </div>

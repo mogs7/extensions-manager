@@ -7,8 +7,6 @@ import GridItem from "./components/GridItems";
 function App() {
 
   const [filterButtonState, setFilterButtonState] = useState("All");
-  // console.log(filterButtonState);
-  
 
   return (
     <div className="Content-Wrapper">
