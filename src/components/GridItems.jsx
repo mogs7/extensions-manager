@@ -4,7 +4,13 @@ import { useState } from "react";
 
 function GridItem(props){
     
-    const [extensionItems, setExtensionItems] = useState(data); 
+    const [extensionItems, setExtensionItems] = useState(
+        data.map((item,index) => ({
+            ...item,
+            id: index
+            }
+        ))
+    ); 
 
     function handleToggle(index) {
         const copyExtension = [...extensionItems];
@@ -18,14 +24,18 @@ function GridItem(props){
         if (props.filterState == "Inactive") {return !extension.isActive};
     })
 
+    
+    console.log(extensionItems);
+    
+
     return (
         filteredExtensions.map((extension, index)=>{
+            // console.log(extension);
             return (
                 <ExtensionItem 
                     key={index}
-                    id={index}
                     {...extension}
-                    onToggle = {()=> handleToggle(index)}
+                    onToggle = {()=> handleToggle(extension.id)}
                 />
             )
         })

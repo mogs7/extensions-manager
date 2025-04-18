@@ -2,12 +2,12 @@ import { Switch } from '@headlessui/react';
 import extenstionItemStyles from './ExtensionItem.module.css';
 
 function ExtensionItem(props){
-    console.log("isActive: " + props.isActive);
+    // console.log("isActive: " + props.isActive);
     // console.log("setIsActive: " + props.setIsActive);
     // console.log("index: " + props.index);
 
 
-
+    // console.log(props.name + "id: " + props.id);
     return (
         <div className={extenstionItemStyles["Extension-Container"]}>
             <div style={{display: "flex", gap: "10px"}}>
@@ -18,7 +18,7 @@ function ExtensionItem(props){
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "space-between"}}>
-                <button className={extenstionItemStyles["Extension-Remove-Button"]}>Remove | ID: {props.id}</button>
+                <button className={extenstionItemStyles["Extension-Remove-Button"]}>Remove</button>
                 <Switch
                     checked={props.isActive}
                     onChange={props.onToggle}
