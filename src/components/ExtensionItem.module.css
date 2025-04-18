@@ -1,0 +1,53 @@
+.Extension-Container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 7px hsl(217, 61%, 90%);
+    justify-content: space-between;
+}
+
+.Extension-Container h2{
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: hsl(227, 75%, 14%);
+}
+
+.Extension-Container p{
+    margin: 0;
+    font-size: 0.8em;
+    color: hsl(226, 11%, 37%);
+    line-height: 1.5em;
+}
+
+.Extension-Logo{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+}
+
+.Extension-Remove-Button{
+    background-color: transparent;
+    border-width: 0.5px;
+    border-radius: 50px;
+    border-color: hsl(217, 61%, 90%);
+    font-weight: 500;
+    font-size: .75em;
+    color: hsl(227, 75%, 14%);
+    margin-left: 10px;
+    height: 30px;
+    width: 80px;
+    transition: 250ms ease-in;
+}
+
+.Extension-Remove-Button:hover{
+    background-color: hsl(3, 77%, 44%);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    border-color: transparent;
+    box-shadow: 0 0 3px hsl(226, 11%, 37%);
+}

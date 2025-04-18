@@ -1,0 +1,26 @@
+.Button-Style{
+    background-color: transparent;
+    border-width: 0.5px;
+    border-radius: 50px;
+    border-color: hsl(217, 61%, 90%);
+    font-weight: 400;
+    font-size: 1em;
+    color: hsl(227, 75%, 14%);
+    margin-left: 10px;
+    height: 30px;
+    width: 80px;
+    transition: 250ms ease-in;
+}
+
+.Button-Style-Active{
+    background-color: #C10007;
+    border-color: transparent;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.Button-Style:hover{
+    cursor: pointer;
+    box-shadow: 0 0 3px hsl(226, 11%, 37%);
+    transition: 250ms ease-in;
+}
