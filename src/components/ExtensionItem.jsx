@@ -2,16 +2,7 @@ import { Switch } from '@headlessui/react';
 import extenstionItemStyles from './ExtensionItem.module.css';
 
 function ExtensionItem(props){
-    // console.log("isActive: " + props.isActive);
-    // console.log("setIsActive: " + props.setIsActive);
-    // console.log("index: " + props.index);
-
-
-    // console.log(props.name + "id: " + props.id);
-    function handleClick(){
-        console.log("ID number: "+props.id);
-    }
-
+    
     return (
         <div className={extenstionItemStyles["Extension-Container"]}>
             <div style={{display: "flex", gap: "10px"}}>
