@@ -8,6 +8,10 @@ function ExtensionItem(props){
 
 
     // console.log(props.name + "id: " + props.id);
+    function handleClick(){
+        console.log("ID number: "+props.id);
+    }
+
     return (
         <div className={extenstionItemStyles["Extension-Container"]}>
             <div style={{display: "flex", gap: "10px"}}>
@@ -18,7 +22,7 @@ function ExtensionItem(props){
                 </div>
             </div>
             <div style={{display: "flex", justifyContent: "space-between"}}>
-                <button className={extenstionItemStyles["Extension-Remove-Button"]}>Remove</button>
+                <button className={extenstionItemStyles["Extension-Remove-Button"]} onClick={props.isRemoved}>Remove</button>
                 <Switch
                     checked={props.isActive}
                     onChange={props.onToggle}
