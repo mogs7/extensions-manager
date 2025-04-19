@@ -3,15 +3,16 @@
     padding: 15px;
     width: 100%;
     height: 7vh;
-    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 5px hsl(217, 61%, 90%);
     justify-content: space-between;
     align-items: center;
+    transition: 100ms ease-in;
 }
 
-.Header-Logo{
-    max-width: 150px;
+
+.Header-Container-dark{
+    background-color: hsl(225, 23%, 24%);
+    box-shadow: 0 0 5px #040918;
 }
 
 .Theme-Toggle-Button{
@@ -19,4 +20,13 @@
     padding: 0;
     width: 40px;
     height: 80%;
+}
+
+.Theme-Toggle-Button img{
+    width: 100%;
+    height: 100%;
+}
+
+.Theme-Toggle-Button:hover{
+    cursor: pointer;
 }

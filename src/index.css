@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-body{
-    margin: 0 auto;
-    background-color: hsl(200, 60%, 99%);  
-    font-family: "Noto Sans", sans-serif;
-}
-
 .Content-Wrapper{
     display: flex;
     flex-direction: column;
@@ -24,7 +18,6 @@ body{
     align-items: center;
     font-size: 0.75em;
     font-weight: 700;
-    color: hsl(227, 75%, 14%);
     height: 5vh;
     margin: 20px;
 }

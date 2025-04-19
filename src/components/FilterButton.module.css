@@ -4,11 +4,11 @@
     border-radius: 50px;
     border-color: hsl(217, 61%, 90%);
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.15em;
     color: hsl(227, 75%, 14%);
     margin-left: 10px;
-    height: 30px;
-    width: 80px;
+    height: 40px;
+    width: 90px;
     transition: 250ms ease-in;
 }
 

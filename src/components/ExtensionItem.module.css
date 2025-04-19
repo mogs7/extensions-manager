@@ -3,15 +3,14 @@
     flex-direction: column;
     gap: 30px;
     padding: 10px;
-    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 0 7px hsl(217, 61%, 90%);
     justify-content: space-between;
 }
 
 .Extension-Container h2{
     margin: 0 0 5px 0;
     font-size: 1.1em;
+    font-weight: 700;
     color: hsl(227, 75%, 14%);
 }
 
@@ -50,4 +49,12 @@
     transition: 250ms ease-in-out;
     border-color: transparent;
     box-shadow: 0 0 3px hsl(226, 11%, 37%);
+}
+
+.Extension-Remove-Button-override{
+    color: hsl(200, 60%, 99%);
+}
+
+.Extension-Remove-Button-override:hover{
+    color: hsl(227, 75%, 14%);
 }

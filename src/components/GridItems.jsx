@@ -13,7 +13,7 @@ function GridItem(props){
     ); 
 
     function handleToggle(index) {
-        console.log("index: "+index);
+        // console.log("index: "+index);
         const copyExtension = [...extensionItems];
         copyExtension[index].isActive = !copyExtension[index].isActive;
         setExtensionItems(copyExtension);
@@ -46,8 +46,8 @@ function GridItem(props){
     })
 
     
-    console.log("extensionItems: ", extensionItems);
-    console.log("filteredItems: " ,filteredExtensions);
+    // console.log("extensionItems: ", extensionItems);
+    // console.log("filteredItems: " ,filteredExtensions);
     
 
     return (
@@ -60,6 +60,7 @@ function GridItem(props){
                     {...extension}
                     onToggle = {()=> handleToggle(extension.id)}
                     isRemoved = {()=> deleteExtension(extension.id)}
+                    isDark = {props.isDark}
                 />
             )
         })
